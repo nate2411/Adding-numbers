@@ -31,8 +31,8 @@ def add_two_numbers():
 
     the_sum = float(entry_1.get()) + float(entry_2.get())
     results_entry.config(state="normal")  # We have set our entry to be read only when we were defining it.
-    results_entry.delete(0, END)  # Fixes an issue where clicking add twice displays the wrong results.
-    results_entry.insert(0, the_sum)  # We always use the set/insert function to a value to an entry.
+    results_entry.delete(0, END)
+    results_entry.insert(0, the_sum) 
     results_entry.config(state="readonly")  # The we set the results value again to readonly using the config.
 
 
