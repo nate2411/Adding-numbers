@@ -4,9 +4,9 @@ from tkinter import Entry, Button, Label, END
 
 root = tk.Tk()
 
-root.geometry("230x150")  # We use geometry to set the width and height of the main window
+root.geometry("230x150")  
 root.title("Adding Numbers")
-# root.configure(bg='blue')  # You can add a background color to your window.
+
 
 label_1 = Label(root, text="Num 1: ")
 entry_1 = Entry(root, width=20)
@@ -26,14 +26,13 @@ results_label.place(x=10, y=80)
 results_entry.place(x=60, y=80)
 
 
-# A function adding two numbers.
 def add_two_numbers():
 
     the_sum = float(entry_1.get()) + float(entry_2.get())
-    results_entry.config(state="normal")  # We have set our entry to be read only when we were defining it.
+    results_entry.config(state="normal")  
     results_entry.delete(0, END)
     results_entry.insert(0, the_sum) 
-    results_entry.config(state="readonly")  # The we set the results value again to readonly using the config.
+    results_entry.config(state="readonly")  
 
 
 add_button = Button(text="ADD", command=add_two_numbers)
